@@ -9,13 +9,14 @@
   --navy-600: #1b4066;
   --slate-700: #33465c;
   --slate-600: #4a5d73;
-  --slate-500: #6b7c90;
+  --slate-500: #55677b;
   --slate-300: #c7d1dc;
   --slate-200: #dde4ec;
   --slate-100: #eef2f7;
   --slate-050: #f6f8fb;
   --white: #ffffff;
   --accent: #b3873f;
+  --accent-text: #8a6420;
   --accent-soft: #f3e9d7;
   --link: #14548c;
 
@@ -71,10 +72,12 @@ a { color: var(--link); text-decoration: none; }
 
 .link {
   color: var(--link);
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--transition), color var(--transition);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--transition), text-decoration-color var(--transition);
 }
-.link:hover { border-bottom-color: currentColor; }
+.link:hover { color: var(--navy-800); text-decoration-thickness: 2px; }
 
 :focus-visible {
   outline: 3px solid var(--accent);
@@ -579,7 +582,7 @@ a { color: var(--link); text-decoration: none; }
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .project-list p:last-child { margin: 0; }
@@ -699,7 +702,7 @@ a { color: var(--link); text-decoration: none; }
 .footer-inner p { margin: 0 0 6px; font-size: 0.88rem; }
 .footer-name { font-weight: 600; color: #fff; font-size: 1rem !important; }
 .footer-meta .link { color: var(--slate-200); }
-.footer-copy { font-size: 0.8rem !important; color: var(--slate-500); }
+.footer-copy { font-size: 0.8rem !important; color: var(--slate-300); }
 
 /* ---------------------------- Back to top ---------------------------- */
 
