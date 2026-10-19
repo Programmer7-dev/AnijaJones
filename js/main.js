@@ -158,14 +158,19 @@
     });
   }
 
-  /* -------------------- Print / Save as PDF -------------------- */
-  var printBtn = document.getElementById('printBtn');
+/* -------------------- Download Resume -------------------- */
+var printBtn = document.getElementById('printBtn');
 
-  if (printBtn) {
-    printBtn.addEventListener('click', function () {
-      window.print();
-    });
-  }
+if (printBtn) {
+  printBtn.addEventListener('click', function () {
+    const link = document.createElement('a');
+    link.href = 'assets/Resume.pdf';
+    link.download = 'Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
 
   /* -------------------- Throttled scroll handler -------------------- */
   var ticking = false;
